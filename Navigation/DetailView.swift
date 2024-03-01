@@ -27,7 +27,7 @@ struct DetailView: View {
             
             Divider()
             
-            NavigationLink("Link to 3",value: 3)
+            /*NavigationLink("Link to 3",value: 3)
             NavigationLink("Link to C",value: "C")
             
             Button{
@@ -35,8 +35,8 @@ struct DetailView: View {
             }label: {
                 Text("Return to Home") // View to trigger
             }.buttonStyle(.borderedProminent)
-                .tint(.indigo)
-                .foregroundColor(.green)
+                .tint(.green)
+                .foregroundColor(.white)*/
         }
         .navigationTitle(text)
         .navigationBarBackButtonHidden()
@@ -45,7 +45,14 @@ struct DetailView: View {
                 Button{
                     path.removeLast() // Remove last view
                 }label: {
-                    Image(systemName: "chevron.left.circle")
+                    Image(systemName: "chevron.left").tint(.green)
+                }
+            }
+            ToolbarItem(placement: ToolbarItemPlacement.primaryAction){
+                Button{
+                    
+                }label: {
+                    Image(systemName: "calendar").tint(.green)
                 }
             }
         }

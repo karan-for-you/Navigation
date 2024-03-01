@@ -32,11 +32,11 @@ struct ContentView: View {
             }
             
             // List is covering majority of screen
-            NavigationLink("I am riding solo here"){
+            /*NavigationLink("I am riding solo here"){
                 DetailView(text:"What",path: $path)
-            }.tint(.red)
+            }.tint(.green)
             
-            Divider().padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))
+            Divider().padding(EdgeInsets(top: 0, leading: 50, bottom: 0, trailing: 50))*/
             .navigationTitle("Home") // -> Title of the View
         }
         
