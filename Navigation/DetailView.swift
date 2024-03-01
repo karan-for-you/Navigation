@@ -35,6 +35,7 @@ struct DetailView: View {
             }
             
             
+            
         }
         .navigationTitle(text)
         .navigationBarBackButtonHidden()
