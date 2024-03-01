@@ -16,6 +16,7 @@
 		4510E8D12B91A9E600D28434 /* NavigationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510E8D02B91A9E600D28434 /* NavigationUITests.swift */; };
 		4510E8D32B91A9E600D28434 /* NavigationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510E8D22B91A9E600D28434 /* NavigationUITestsLaunchTests.swift */; };
 		4510E8E02B91AADB00D28434 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4510E8DF2B91AADB00D28434 /* DetailView.swift */; };
+		451D67C82B91D98E00EF84F3 /* NavigationStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451D67C72B91D98D00EF84F3 /* NavigationStateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		4510E8D02B91A9E600D28434 /* NavigationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITests.swift; sourceTree = "<group>"; };
 		4510E8D22B91A9E600D28434 /* NavigationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4510E8DF2B91AADB00D28434 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		451D67C72B91D98D00EF84F3 /* NavigationStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				4510E8B92B91A9E600D28434 /* Assets.xcassets */,
 				4510E8BB2B91A9E600D28434 /* Preview Content */,
 				4510E8DF2B91AADB00D28434 /* DetailView.swift */,
+				451D67C72B91D98D00EF84F3 /* NavigationStateManager.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				4510E8B62B91A9E500D28434 /* ContentView.swift in Sources */,
 				4510E8E02B91AADB00D28434 /* DetailView.swift in Sources */,
 				4510E8B82B91A9E500D28434 /* Item.swift in Sources */,
+				451D67C82B91D98E00EF84F3 /* NavigationStateManager.swift in Sources */,
 				4510E8B42B91A9E500D28434 /* NavigationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
