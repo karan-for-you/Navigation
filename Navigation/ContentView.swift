@@ -11,47 +11,22 @@ import SwiftData
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
+    
+    @State private var path = NavigationPath()
 
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            }
-        } detail: {
-            Text("Select an item")
+        NavigationStack(path : $path){ // Main Stack -> Holder
+            List{
+                NavigationLink("Go to Detail A", value: "Show AAAA")
+                NavigationLink("Go to B", value: "Show BBB")
+                NavigationLink("Go to number 1", value: 1) // Link between two Views
+            }.navigationDestination(for: String.self){ textValue in
+                DetailView(text: textValue, path: $path)
+            }.navigationDestination(for: Int.self){ intValue in // Destination of the View -> In closure
+                DetailView(text: "Detail with \(intValue)", path: $path)
+            }.navigationTitle("Root View") // -> Title of the View
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        
     }
 }
 
