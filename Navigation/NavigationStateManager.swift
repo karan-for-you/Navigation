@@ -17,7 +17,7 @@ class NavigationStateManager : ObservableObject{
     }
     
     func goToSettings(){
-        
+        //... Manipulation
     }
     
 }

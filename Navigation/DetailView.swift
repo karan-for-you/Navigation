@@ -35,13 +35,11 @@ struct DetailView: View {
             }label: {
                 Text("Return to Home") // View to trigger
             }.buttonStyle(.borderedProminent)
-            .tint(.green)
-            
-            
-            
+                .tint(.indigo)
+                .foregroundColor(.green)
         }
         .navigationTitle(text)
-        /*.navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden()
         .toolbar{
             ToolbarItem(placement: backButtonPlacement){
                 Button{
@@ -50,7 +48,7 @@ struct DetailView: View {
                     Image(systemName: "chevron.left.circle")
                 }
             }
-        }*/
+        }
     }
 }
 
