@@ -24,12 +24,14 @@ struct DetailView: View {
         VStack {
             Text("Detail view showing")
             Text(text)
+            
             Divider()
+            
             NavigationLink("Link to 3",value: 3)
-            NavigationLink("Link to C",value: "CCCC")
+            NavigationLink("Link to C",value: "C")
             
             Button{
-                path = NavigationPath() // Reset to Home
+                path = NavigationPath() // Set path to Home 
             }label: {
                 Text("Return to Home")
             }
